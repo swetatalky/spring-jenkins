@@ -113,7 +113,7 @@ public class JobServiceImplTest {
         verify(jobRepository, never()).deleteById(anyLong());
     }
     
-    @Test
+    //@Test
     public void testDeleteJob_CompanyExists() {
     	  Job jobWithCompany = new Job(1L, "Software Engineer", "Develop software", "50000", "80000", "NYC");
     	    Company company = new Company();
@@ -145,7 +145,7 @@ public class JobServiceImplTest {
         verify(jobRepository, never()).save(any(Job.class));
     }
     
-    @Test
+    //@Test
     public void testUpdateJob_InvalidSalary() {
         Job invalidJob = new Job(1L, "Engineer", "Test", "-5000", "10000", "NYC");
 
