@@ -150,6 +150,7 @@ public class JobServiceImplTest {
         Job invalidJob = new Job(1L, "Engineer", "Test", "-5000", "10000", "NYC");
 
         when(jobRepository.existsById(1L)).thenReturn(true);
+        //hi just checking new build 
         when(jobRepository.findById(1L)).thenReturn(Optional.of(job));
 
         Exception exception = assertThrows(InvalidInputException.class, () -> jobService.updateJob(1L, invalidJob));
